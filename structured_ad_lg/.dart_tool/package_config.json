@@ -1,0 +1,62 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "charcode",
+      "rootUri": "file:///C:/Users/takuy/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/charcode-1.1.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "collection",
+      "rootUri": "file:///C:/Users/takuy/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/collection-1.14.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.3"
+    },
+    {
+      "name": "meta",
+      "rootUri": "file:///C:/Users/takuy/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/meta-1.2.4",
+      "packageUri": "lib/",
+      "languageVersion": "1.12"
+    },
+    {
+      "name": "path",
+      "rootUri": "file:///C:/Users/takuy/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/path-1.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "source_span",
+      "rootUri": "file:///C:/Users/takuy/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/source_span-1.7.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
+    },
+    {
+      "name": "string_scanner",
+      "rootUri": "file:///C:/Users/takuy/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/string_scanner-1.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "term_glyph",
+      "rootUri": "file:///C:/Users/takuy/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/term_glyph-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "1.8"
+    },
+    {
+      "name": "yaml",
+      "rootUri": "file:///C:/Users/takuy/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/yaml-2.2.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.4"
+    },
+    {
+      "name": "structured_ad_lg",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "2.9"
+    }
+  ],
+  "generated": "2020-12-02T04:34:23.866332Z",
+  "generator": "pub",
+  "generatorVersion": "2.10.4"
+}

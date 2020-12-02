@@ -1,14 +1,16 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:yaml/yaml.dart';
 
 void main(List<String> args) {
   String fileData;
   Future<String> future=file_read(args[0]);
-  future.then((content) => analyze(content))
+  future.then((content) {analyze(content);print("###");})
         .catchError((error) => print(error));
 }
  Future<String> file_read(String name) async {
   String text;
+
   try {
     final file = File('./${name}.txt');
       text = await file.readAsString();
@@ -20,7 +22,7 @@ void main(List<String> args) {
 void analyze(String data){
   List<String> line=rmVoid(data.split("\r\n"));
   num lineLen= line.length;
-  Map sData={};
+  List<Map> sData=[];
   lineLen= line.length;
   List<String> line2=[];
   for (num i = 0; i < lineLen; i++) {
@@ -30,11 +32,26 @@ void analyze(String data){
     line2.add(ops);
     
   }
+  int locLvPtr=0;
+  sData=scan(line,locLvPtr,sData);
   line=rmVoid(line2);
   lineLen= line.length;
   for (num i = 0; i < lineLen; i++) {
     print(line[i]);
   }
+}
+List<Map> scan(String line,int locLvPtr,List<Map> sdata){
+  String fullLoc=line[0].split("：")[0];
+  int locLvPtr=0;
+  if (locLv(fullLoc)>0) {
+    if (locLv(fullLoc)>locLvPtr) {
+      scan();
+    } else {
+    }
+  }else{
+    return sData;
+  }
+
 }
 int locLv(String loc){
   String par = loc.substring(loc.length-1);
@@ -76,4 +93,10 @@ List<String> rmVoid(List<String> t){
     }
   }
   return a;
+}
+
+YamlMap get yamlMap {
+  final _yamlDocument = loadYamlDocument(_yaml);
+  final _yamlNode = _yamlDocument.contents;
+  return _yamlNode.value as YamlMap;
 }
