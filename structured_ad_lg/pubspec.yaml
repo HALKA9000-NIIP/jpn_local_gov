@@ -1,9 +1,7 @@
 name: structured_ad_lg
-version: 0.1.3
-description: |
+version: 0.1.5
+description: |-
   The package is to handle administrative division on local government(ad_lg) as structured data, and make for conveniently operation in development of e-administration system.
-  - white2yaml module: The module works to scan white text data and convert it to structured data with yaml format.
-  - yamlEdit module: The module is edit(add/remove/move/edit) node of the ad_lg data, as newly establishing, changing or abolishing on ad_lg.
 repository: https://github.com/HALKA9000-NIIP/jpn_local_gov
 environment:
   sdk: '>=2.9.0 <3.0.0'
