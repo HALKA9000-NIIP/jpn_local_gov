@@ -1,26 +1,5 @@
 import 'dart:math';
-main(List<String> args) {
-  Stack<int> test=Stack<int>();
-  int hoge;
-  for (num i = 0; i < args.length; i++) {
-    try {
-      hoge = int.parse(args[i].toString());
-    } catch (exception) {
-    hoge = 0;
-    }
-    test.push(hoge);
-    print("nowhead[$i]::${test.nowHead()}");
-  }
-  print(">> end push");
-  print("nowhead[${args.length-1}]::${test.nowHead()}");
-  print("isEmpty[]::${test.isEmpty()}");
-  for (num i = 0; i < args.length; i++) {
-    print("poped[$i]::${test.pop()}");
-    print("nowhead[$i]::${test.nowHead()}");
-  }
-  print(">> end pop");
-  print("isEmpty[]::${test.isEmpty()}");
-}
+
 class Stack<T> {
   List<T> data = [];
   int head=-1;
@@ -38,7 +17,33 @@ class Stack<T> {
     return temp;
   }
 
-  void rotate(String direction, int nr){}
+  void rotate(String direction, int nr){
+    Direction dire=Direction();
+    if (nr<0) {
+      if (direction==dire.left) {
+        direction=dire.right;
+      } else if(direction==dire.right) {
+        direction=dire.left;
+      }else{}
+      nr*=-1;
+    }
+    for (var k = 0; k < nr; k++) {
+      if (direction==dire.left) {
+        T temp=this.data[0];
+        for (var i = 0; i < this.head; i++) {
+          this.data[i]=this.data[i+1];
+        }
+        this.data[this.head]=temp;
+      } else if (direction==dire.right) {
+        T temp=this.data[this.head];
+        for (var i = this.head; i >= 1; i--) {
+          this.data[i]=this.data[i-1];
+        }
+        this.data[0]=temp;
+      } else {
+      }
+    }
+  }
   void duplicate(){
     T temp = this.pop();
     this.push(temp);
@@ -82,9 +87,10 @@ class Stack<T> {
     }
   }
 }
-class Dirction {
-  static final String left="left";
-  static final String right="right";
-  static final String upper="upper";
-  static final String downer="downer";
+class Direction {
+  final String left="left";
+  final String right="right";
+  final String upper="upper";
+  final String downer="downer";
+
 }
